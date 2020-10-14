@@ -1,0 +1,41 @@
+.nav-link {
+    color: white !important;
+    
+    font-weight: 400;
+}
+
+
+.nav-link:focus {
+    color: rgb(192, 165, 161) !important;
+}
+
+.upload {
+    padding: 50px;
+    margin: 20px 0 0 50px;
+    height: 100px !important;
+}
+
+h3{
+    font-size:10px;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid cyan; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: cyan; }
+  }
+

@@ -1,0 +1,58 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Comments</title>
+    <style type="text/css">
+        .comments {
+            min-height: 100px;
+            width: 80%;
+            background-color: rgb(214,214,214);
+            border-radius: 30px;
+            padding: 10px;
+        }
+        .comment_body { 
+            font-size: 30px;
+            text-align: center;
+        }
+        .commenter {
+            text-align: center;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body class='container'>
+
+
+    <a href="{%url 'home' %}" class="btn btn-outline-danger">Home Page</a>
+    <div class="container">
+        <h3>
+        Comments...
+        </h3>
+        {% for comment in commenty %}
+            <div class="comments">
+                <div class="comment_body">
+                    {{comment.body}}
+                </div>
+                <div class="commenter">
+                    By: {{comment.name}} - {{comment.date_added}}
+                </div>
+            </div>
+            <br>
+            {%empty%}
+            <h1>No comments in this post...</h1>
+                 {% endfor %}
+</div>
+<!-- <div class="comments">
+    <div class="comment_body">
+        hello this is awesome!!!
+    </div>
+    <div class="commenter">
+        By: {{comment.name}} - {{comment.}}
+    </div>
+</div> -->
+</body>
+</html>
